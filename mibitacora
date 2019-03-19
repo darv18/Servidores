@@ -1,0 +1,37 @@
+#!/bin/bash
+##este script ace uso de una bitacora cuando el equipo enciende o apaga
+#Provides:    hola
+#Resquired-Start:	$remote_fs $syslog
+#Resquired-Stop:	$remote_fs $syslog
+#Default-Start:		1 2 3 4 5
+#Default-Stop:	  	1 6
+#Short-Description:	Ejemplo de script
+#Description:		This Fiele should be used to construct scripts tobe
+
+### END INIT INFO
+
+#Author: Daniel Rodriguez <rodriguez1897daniel@gmail.com>
+
+DESC="Este Servicio no hace nada mas que dar los buenos dias"
+
+case "$1" in
+
+start)
+	echo "Iniciando servicio Hola"
+	echo "Hola que tengas un excelente Día" >>/var/log/hola.txt
+	date >> /var/log/hola.txt
+	echo "============================">>/var/log/hola.txt
+	;;
+
+stop)
+	echo "Deteniendo Servicio hola"
+	echo "Gracias por utilizar el demonio hola" >>/var/log/hola.txt
+	;;
+
+*)
+	echo "Error en la sintaxis es Hola start | stop"
+	;;
+
+esac
+exit 0
+	
