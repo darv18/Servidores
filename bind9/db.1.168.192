@@ -1,0 +1,16 @@
+$TTL    3D
+@       IN      SOA     ns.patito.com.    root.patito.patito. (
+                        2013050601      ; serial
+                        8H              ; refresh
+                        2H              ; retry
+                        4W              ; expire
+                        1D )            ; minimum
+;
+                NS      ns.patito.com.    ; Nameserver address
+
+100             PTR     server.patito.com.
+100             PTR     ns.patito.com.
+100             PTR     mail.patito.com.
+101             PTR     virtual.patito.com.
+1               PTR     router.patito.com.
+
